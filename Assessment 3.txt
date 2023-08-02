@@ -1,0 +1,178 @@
+	ASSESSMENT-3
+
+Name:Biju R
+Roll No:961420105010
+Department:EEE
+
+
+PROGRAMS:-
+
+I.list 
+
+1. write a python program to sum all the items
+
+my_list=[1,2,3,4,5]
+sum_of_list=sum(my_list)
+print(sum_of_list)
+
+
+2.Write a Python program to get the largest number from a list
+
+my_list=[1,2,3,4,5]
+largest_number=max(my_list)
+print(largest_number)
+
+
+3.Write a Program that get two lists as input and check if they have at least one common member
+
+list1=[1,2,3,4,5]
+list2=[5,6,7,8,9]
+common_member=set(list1).intersection(list2)
+if common_member:
+    print("The list have at least oneb common member.,")
+else:
+    print("The list do not have any common members.")
+
+...................................................................
+...................................................................
+
+II.Tuples
+
+1.Write a Python program to create a tuple with different data types
+
+my_tuple=("apple",1,True,4.5)
+print(my_tuple)
+
+
+2.Write a Python program to add an item in a tuple
+
+my_tuple=(1,2,3,4,5)
+my_list=list(my_tuple)
+my_list.append(6)
+my_tuple=tuple(my_list)
+print(my_tuple)
+
+
+3.Write a Python program to find the repeated items of a tuple
+
+
+my_tuple=(1,2,3,4,5,3,4,6,7)
+repeated_items=[]
+for item in my_tuple:
+    if my_tuple.count(item)>1 and item not in repeated_items:
+        repeated_items.append(item)
+print(repeated_items)
+
+........................................................................
+........................................................................
+
+III.Strings
+
+1.Write a Python program to remove the nth index character from a 
+nonempty string
+
+my_string="hello,world!"
+n=3
+new_string=my_string[:n]+my_string[n+1:]
+print(new_string)
+
+
+2.Write a Python program to change a given string to a new string where the 
+first and last chars have been exchanged
+
+my_string="liju, RaghuB"
+new_string=my_string[-1]+my_string[1:-1]+my_string[0]
+print(new_string)
+
+
+3.Write a Python function to reverses a string if its length is a multiple of 6
+
+def reverse_string_if_multiple_of_six(my_string):
+    if len(my_string)%6==0:
+        return my_string[::-1]
+    else:
+         return my_string
+         
+my_string=input("Enter a string:")
+new_string=reverse_string_if_multiple_of_six(my_string)
+print(new_string)
+
+.............................................................................
+.............................................................................
+
+IV.Date and Time
+
+1.Write a Python program to get the first and last second
+
+import datetime
+now=datetime.datetime.now()
+first_second=datetime.datetime(now.year,now.month,now.day,now.hour,now.minute,0,0)
+last_second=datetime.datetime(now.year,now.month,now.day,now.hour,now.minute,59,999999)
+print("The first second of the current date and time is:",first_second)
+print("The last second of the current date abnd time is:",last_second)
+
+
+2.Write a Python program to get the date of the last Tuesday
+
+import datetime
+now=datetime.date.today()
+last_tuesday=now-datetime.timedelta(days=now.weekday()-1)
+print("The date of the last tuesday is:",last_tuesday)
+
+
+3.Write a Python program to calculate a number of days between two dates
+
+import datetime
+first_date_str=input("Enter the first date(YYYY-MM-DD):")
+first_date=datetime.datetime.strptime(first_date_str,"%Y-%m-%d").date()
+second_date_str=input("Enter the second date(YYYY-MM-DD):")
+second_date=datetime.datetime.strptime(second_date_str,"%Y-%m-%d").date()
+delta=second_date-first_date
+num_days=delta.days
+print("The number of the days between",first_date_str,"and",second_date_str,"is",num_days)
+
+.................................................................................
+.................................................................................
+
+V.Math
+
+1.Write a Python program to find the smallest multiple of the first n 
+numbers. Also, display the factors
+
+def smallest_multiple(n):
+    if (n <= 2):
+        return n
+    i = n * 2
+    factors = [number for number in range(n, 1, -1) if number * 2 > n]
+    print(factors)
+    while True:
+        for a in factors:
+            if i % a != 0:
+                i += n
+                break
+            if (a == factors[-1] and i % a == 0):
+                return i
+
+print(smallest_multiple(5))
+
+
+2.Write a Python program to convert radian to degree
+
+import math
+radians=float(input("Enter a value in radians:"))
+degrees=math.degrees(radians)
+print(radians,"radians is convert to",degrees,"degrees")
+
+
+3.Write a Python program to multiply two integers without using the * 
+operator in python
+
+num1=int(input("Enter the first integer:"))
+num2=int(input("Enter the second integer:"))
+product=0
+for i in range(num2):
+    product+=num1
+print(num1,"times",num2,"equals",product)
+
+.................................................................................
+.................................................................................
