@@ -1,0 +1,17 @@
+total_population = 80000
+men = int(total_population * 0.52)
+women = int(total_population * 0.48)
+total_literacy = int(total_population * 0.48)
+literate_men = int(men * 0.35)
+literate_women = int(women * (total_literacy - literate_men) / total_literacy)
+non_literate_men = men - literate_men
+non_literate_women = women - literate_women
+
+print("Population:", total_population)
+print("Men:", men)
+print("Women:", women)
+print("Literacy:", total_literacy)
+print("Literate Men:", literate_men)
+print("Literate Women:", literate_women)
+print("Non-Literate Men:", non_literate_men)
+print("Non-Literate Women:", non_literate_women)

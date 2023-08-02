@@ -1,0 +1,6 @@
+sp = int(input("Enter total selling price of 15 items: "))
+profit = int(input("Enter total profit earned on 15 items: "))
+
+cp = (sp - profit) / 15
+
+print("Cost price of one item:", cp)

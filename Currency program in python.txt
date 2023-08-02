@@ -1,0 +1,10 @@
+amt = int(input("Enter amount to be withdrawn in hundreds: "))
+hundred = amt // 100
+amt = amt % 100
+fifty = amt // 50
+amt = amt % 50
+ten = amt // 10
+
+print("Number of hundred-rupee notes:", hundred)
+print("Number of fifty-rupee notes:", fifty)
+print("Number of ten-rupee notes:", ten)
